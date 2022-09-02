@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option go_package = "github.com/stevenferrer/cmux-http-grpc/pb";
+
+service Ping {
+  rpc Ping (PingRequest) returns (PingResponse) {}
+}
+
+message PingRequest {}
+
+message PingResponse {
+  string message = 1;
+}
